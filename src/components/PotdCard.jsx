@@ -1,12 +1,11 @@
-import styles from "styles/Potd.module.css"; 
+import styles from "styles/Potd.module.css";
 import { Link } from "next/link";
 
-
-const PotdCard = ({ title, desc, url,date,topic}) => {
-    return (
-      <>
-        <div className={styles.card}>
-          {/* <Image
+const PotdCard = ({ title, desc, url, date, topic }) => {
+  return (
+    <>
+      <div className={styles.card}>
+        {/* <Image
             src={`/images/Events/${img}.png`}
             alt={title}
             width={300}
@@ -15,18 +14,23 @@ const PotdCard = ({ title, desc, url,date,topic}) => {
             priority
             className={styles.banner}
           /> */}
-       
-          <div className={styles.card_details}>
-            <h2>{title}</h2>
-            <p> {desc} </p>
-            <p><small>Date:{date}</small></p>
-            <p><small>Topic:{topic}</small></p>
-            <a href={url}><button>Solve Now !!!</button></a>
-          </div>
+
+        <div className={styles.card_details}>
+          <h2>{title}</h2>
+          <p> {desc} </p>
+          <p>
+            <small>Date:{date}</small>
+          </p>
+          <p>
+            <small>Topic:{topic}</small>
+          </p>
+          <a href={url}>
+            <button>Solve Now !!!</button>
+          </a>
         </div>
-        
-      </>
-    );
-  };
-  
-  export default PotdCard;
+      </div>
+    </>
+  );
+};
+
+export default PotdCard;

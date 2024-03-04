@@ -3,7 +3,6 @@ import styles from "styles/Home/Team.module.css";
 import Card from "./Card";
 import React from "react";
 
-
 const PreviousTeam = () => {
   // Leader Card Map
   let leadCard = data.leadList.map((lead) => {
