@@ -1,15 +1,18 @@
 import styles from "styles/Home/About.module.css";
 import { Logo } from "../Logo/Logo";
 import { Logo2 } from "../Logo/Logo2";
+import StarIcon from "../../styles/StarButton/StarIcon";
 
 const About = () => {
   return (
     <section id="About">
       <h2 className="section-title"> About Us</h2>
+
       <div className={styles.container}>
         <div className={styles.title}>
           <Logo /> <Logo2 />
         </div>
+
         <p>
           <strong>Hey there, </strong> <br />
           Want to outshine in your career ? or desire to give shape to your

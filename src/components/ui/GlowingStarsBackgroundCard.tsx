@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../../utils/cn";
@@ -7,9 +5,13 @@ import { cn } from "../../utils/cn";
 export const GlowingStarsBackgroundCard = ({
   className,
   children,
+  description,
+  title,
 }: {
   className?: string;
   children?: React.ReactNode;
+  description?: string; // Add description prop
+  title?: string;
 }) => {
   const [mouseEnter, setMouseEnter] = useState(false);
 
@@ -29,7 +31,13 @@ export const GlowingStarsBackgroundCard = ({
       <div className="flex justify-center items-center">
         <Illustration mouseEnter={mouseEnter} />
       </div>
-      <div className="px-2 pb-6">{children}</div>
+      <div className="px-2 pb-6">
+        {/* Display the description inside the GlowingStarsBackgroundCard */}
+        <GlowingStarsTitle>{title}</GlowingStarsTitle>
+        <GlowingStarsDescription>{description}</GlowingStarsDescription>
+       
+      </div>
+      {children}
     </div>
   );
 };
