@@ -4,8 +4,12 @@ import Card from "./Card";
 import React from "react";
 import Link from "next/link";
 import { NodeNextRequest } from "next/dist/server/base-http/node";
-import { GlowingStarsBackgroundCard } from "../VisualEffects/GlowingStarsBackgroundCard";
 
+import {
+  GlowingStarsBackgroundCard,
+  GlowingStarsDescription,
+  GlowingStarsTitle,
+} from "../ui/GlowingStarsBackgroundCard";
 const Team = () => {
   // Leader Card Map
   let leadCard = data1.leadList.map((lead) => {
@@ -25,6 +29,15 @@ const Team = () => {
       <Link href="/Core-Team-22" style={{ textDecoration: "none" }}>
         <button className={styles.container1}>Previous Members</button>
       </Link>
+      <h2 className=" section-title">Star Performers</h2>
+      <div className={styles.container2}>
+        {
+          <GlowingStarsBackgroundCard
+            key={data1.chapterLead[0].id}
+            data={data1.chapterLead[0]}
+          />
+        }
+      </div>
     </section>
   );
 };
